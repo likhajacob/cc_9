@@ -19,3 +19,22 @@ const emp1 = new Employee('Alice Johnson', 101, 'Sales', 5000);
 
 console.log(emp1.getDetails());//Employee: Alice Johnson, ID: 101, Department: Sales, Salary: 5000
 console.log("Expected Salary:", emp1.calculateAnnualSalary());//60000
+// Task 2: Creating a Manager Class
+
+class Manager extends Employee {
+    constructor(name, id, department, salary, teamSize) { // constructor for manager class
+        super(name, id, department, salary); // calling the constructor of the parent class
+        this.teamSize = teamSize; // team size of the manager
+    }
+    getDetails() {
+        return `Manager: ${this.name}, ID: ${this.id}, Department: ${this.department}, Salary: $${this.salary}, Team Size: ${this.teamSize}`;
+    } // end of details
+    calculateBonus() {
+        return this.calculateAnnualSalary() * 0.1;//bonus of the manager
+    }
+}; // end of manager class
+
+const mgr1 = new Manager("John Smith", 201, "IT", 8000, 5);
+console.log(mgr1.getDetails());//Manager: John Smith, ID: 201, Department: IT, Salary: 8000, Team Size: 5
+
+console.log("Expected Bonus:", mgr1.calculateBonus());//Expected Bonus: 7200
