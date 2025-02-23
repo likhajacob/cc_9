@@ -68,3 +68,9 @@ const company = new Company("TechCorp"); //Test case
 company.addEmployee(emp1); //Adding emp1 using addEmployee method
 company.addEmployee(mgr1); //Adding mgr1 using addEmployee method
 company.listEmployees(); //Logging
+// Task 4: Implementing a Payroll System
+console.log("\nTask 4: Implementing a Payroll System");
+
+// Logging test cases output:
+console.log(company.calculateTotalPayroll()); 
+// Expected output: 165600 (assuming emp1 and mgr1 salaries)
