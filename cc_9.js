@@ -74,3 +74,11 @@ console.log("\nTask 4: Implementing a Payroll System");
 // Logging test cases output:
 console.log(company.calculateTotalPayroll()); 
 // Expected output: 165600 (assuming emp1 and mgr1 salaries)
+// Task 5: Implementing Promotions
+console.log("\nTask 5: Implementing Promotions");
+
+
+// Logging test cases outputs:
+company.promoteToManager(emp1, 3);
+company.listEmployees();
+// Expected output: "Manager: Alice Johnson, ID: 101, Department: Sales, Salary: $5000, Team Size: 3"
